@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
   }
 
   login():void{
-    this.router.navigate(['home']);
+    // alert("Login Success!!!");
+    this.router.navigate(['welcome']);
   }
 }
