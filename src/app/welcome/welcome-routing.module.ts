@@ -13,16 +13,36 @@ import { NotFoundComponent } from 'app/not-found/not-found.component';
 
 const welcomeRoutes: Routes
   = [
-    { path: 'dashboard', component: DashboardComponent },
-    { path: 'welcome', component: WelcomeComponent }
-  ];
+      {
+        path:'welcome',
+        component: WelcomeComponent,
+        children:[
+           {
+            path:'',
+            component: DashboardComponent,
+          },
+          {
+            path:'about',
+            component: AboutComponent,
+          },
+          {
+            path:'contact',
+            component: ContactComponent,
+          },
+          {
+            path:'home',
+            component: HomeComponent,
+          },
+        ]
+      }
+    ];
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(welcomeRoutes)
   ],
-  declarations: [],
-  exports
+  exports:[RouterModule],
+  declarations: []
 })
 export class WelcomeRoutingModule { }

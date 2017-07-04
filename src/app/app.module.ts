@@ -5,20 +5,14 @@ import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RoutingModule } from 'app/routing/routing.module';
 import { WelcomeModule } from 'app/welcome/welcome.module';
-
-import {MdSidenavModule} from '@angular/material';
-import {MdInputModule} from '@angular/material';
-import {MdToolbarModule} from '@angular/material';
-import {MdButtonModule} from '@angular/material';
-import {MdListModule} from '@angular/material';
+import { CustomMaterialModule } from 'app/custom-material/custom-material.module';
 
 import { AppComponent } from './app.component';
-
-import 'hammerjs';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import 'hammerjs';
 
 @NgModule({
   declarations: [
@@ -35,12 +29,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     BrowserAnimationsModule,
     RoutingModule,
     WelcomeModule,
-    
-    MdSidenavModule,
-    MdInputModule,
-    MdToolbarModule,
-    MdButtonModule,
-    MdListModule
+    CustomMaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

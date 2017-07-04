@@ -9,32 +9,52 @@
   <button md-icon-button type="button" (click)="logOut()">
     <md-icon class="material-icons md-18">account_box</md-icon>
   </button>
-  <!-- This fills the remaining space of the current row -->
-  <!--<span class="example-fill-remaining-space"></span>-->
 </md-toolbar>
 
 <md-sidenav-container class="example-sidenav-fab-container">
-
-  <md-sidenav #sidenav mode="side">
+  <md-sidenav #sidenav mode="side" opened="true">
     <md-nav-list>
-      <!--<a md-list-item href="..."> sdsdsdsdfsfgdsgdfsgsdfsfdsf </a>-->
+      <md-list-item>
+        <!--<button md-icon-button (click)="showInfo(link)">
+        <md-icon class="material-icons">info</md-icon>
+     </button>-->
+        <a md-line routerLink='about'>About</a>
+      </md-list-item>
 
+      <md-list-item>
+        <!--<button md-icon-button (click)="showInfo(link)">
+        <md-icon class="material-icons">info</md-icon>
+     </button>-->
+        <a md-line routerLink='contact'>Contact</a>
+      </md-list-item>
+
+      <md-list-item>
+        <!--<button md-icon-button (click)="showInfo(link)">
+        <md-icon class="material-icons">info</md-icon>
+     </button>-->
+        <a md-line routerLink='home'>Home</a>
+      </md-list-item>
+    </md-nav-list>
+  </md-sidenav>
+
+  <router-outlet></router-outlet>
+  
+</md-sidenav-container>
+
+<!--<md-sidenav-container class="example-sidenav-fab-container">
+
+  <md-sidenav #sidenav mode="side" opened="true">
+    <md-nav-list>
       <md-list-item>
         <button md-icon-button (click)="showInfo(link)">
         <md-icon class="material-icons">info</md-icon>
      </button>
-        <a md-line href="...">About</a>
+        <a md-line routerLink='/about'>About</a>
       </md-list-item>
-
     </md-nav-list>
   </md-sidenav>
 
   <div class="maincontent">
-    <md-input-container>
-      <input mdInput placeholder="Favorite food">
-    </md-input-container>
-
-    <md-icon class="material-icons">face</md-icon>
+    <router-outlet></router-outlet>
   </div>
-
-</md-sidenav-container>
+</md-sidenav-container>-->
