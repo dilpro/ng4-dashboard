@@ -6,16 +6,13 @@ import { AboutComponent } from 'app/about/about.component';
 import { ContactComponent } from 'app/contact/contact.component';
 import { DashboardComponent } from 'app/dashboard/dashboard.component';
 import { HomeComponent } from 'app/home/home.component';
-import { LoginComponent } from 'app/login/login.component';
 import { WelcomeComponent } from 'app/welcome/welcome.component';
-import { SignUpComponent } from 'app/sign-up/sign-up.component';
-import { NotFoundComponent } from 'app/not-found/not-found.component';
 
 const welcomeRoutes: Routes
   = [
       {
         path:'welcome',
-        component: WelcomeComponent,
+        component:WelcomeComponent,
         children:[
            {
             path:'',
@@ -32,7 +29,7 @@ const welcomeRoutes: Routes
           {
             path:'home',
             component: HomeComponent,
-          },
+          }
         ]
       }
     ];

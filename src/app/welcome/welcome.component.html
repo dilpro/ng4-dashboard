@@ -1,4 +1,13 @@
-<md-toolbar color="primary">
+<nav>
+  <a md-line routerLink='about'>About</a>
+  <a md-line routerLink='contact'>Contact</a>
+  <a md-line routerLink='home'>Home</a>
+</nav>
+<main>
+    <!--<router-outlet></router-outlet>-->
+</main>
+
+<!--<md-toolbar color="primary">
   <span>SMS</span>
   <button md-icon-button (click)="sidenav.toggle()">
     <md-icon class="material-icons md-18">menu</md-icon>
@@ -15,23 +24,14 @@
   <md-sidenav #sidenav mode="side" opened="true">
     <md-nav-list>
       <md-list-item>
-        <!--<button md-icon-button (click)="showInfo(link)">
-        <md-icon class="material-icons">info</md-icon>
-     </button>-->
         <a md-line routerLink='about'>About</a>
       </md-list-item>
 
       <md-list-item>
-        <!--<button md-icon-button (click)="showInfo(link)">
-        <md-icon class="material-icons">info</md-icon>
-     </button>-->
         <a md-line routerLink='contact'>Contact</a>
       </md-list-item>
 
       <md-list-item>
-        <!--<button md-icon-button (click)="showInfo(link)">
-        <md-icon class="material-icons">info</md-icon>
-     </button>-->
         <a md-line routerLink='home'>Home</a>
       </md-list-item>
     </md-nav-list>
@@ -39,7 +39,7 @@
 
   <router-outlet></router-outlet>
   
-</md-sidenav-container>
+</md-sidenav-container>-->
 
 <!--<md-sidenav-container class="example-sidenav-fab-container">
 

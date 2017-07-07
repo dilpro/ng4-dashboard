@@ -5,6 +5,7 @@ import { WelcomeRoutingModule } from 'app/welcome/welcome-routing.module';
 
 import { WelcomeComponent } from 'app/welcome/welcome.component';
 import { AboutComponent } from 'app/about/about.component';
+import { HomeComponent } from 'app/home/home.component';
 import { DashboardComponent } from 'app/dashboard/dashboard.component';
 import { ContactComponent } from 'app/contact/contact.component';
 
@@ -18,7 +19,8 @@ import { ContactComponent } from 'app/contact/contact.component';
     WelcomeComponent,
     AboutComponent,
     DashboardComponent,
-    ContactComponent
+    ContactComponent,
+    HomeComponent
   ]
 })
 export class WelcomeModule { }
