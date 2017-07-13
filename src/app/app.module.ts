@@ -13,6 +13,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import 'hammerjs';
 
+
 @NgModule({
   declarations: [
     AppComponent,

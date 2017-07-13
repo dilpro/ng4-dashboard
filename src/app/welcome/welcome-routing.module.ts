@@ -7,6 +7,7 @@ import { ContactComponent } from 'app/contact/contact.component';
 import { DashboardComponent } from 'app/dashboard/dashboard.component';
 import { HomeComponent } from 'app/home/home.component';
 import { WelcomeComponent } from 'app/welcome/welcome.component';
+import { UserComponent } from 'app/user/user.component';
 
 const welcomeRoutes: Routes
   = [
@@ -29,6 +30,10 @@ const welcomeRoutes: Routes
           {
             path:'home',
             component: HomeComponent,
+          },
+          {
+            path:'user',
+            component: UserComponent,
           }
         ]
       }
