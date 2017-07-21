@@ -1,16 +1,39 @@
-<form (ngSubmit)>
-  <div class="form-group">
-    <label >Name</label>
-    <input type="text" name="name" class="form-control" required [(ngModel)]="user.first_name">
+<div class="jumbotron text-center" *ngIf="submitted">
+  <h1>Thanks for submitting!!!</h1>
+  <p>We appritiate it!!!</p>
+</div>
+
+<form (ngSubmit)="processForm()" *ngIf="!submitted" #form="ngForm">
+Is Form Valid:{{form.valid}}
+
+  <div class="form-group" 
+    [ngClass]="{
+      'has-danger':firstName.invalid && firstName.touched,
+      'has-success':firstName.valid && firstName.touched
+    }">
+    <label class="form-control-label">Name</label>
+    <input type="text" name="name" class="form-control" required [(ngModel)]="user.first_name" #firstName="ngModel">
+
+    <div class="form-control-feedback" *ngIf="firstName.invalid && firstName.touched"> 
+      Name is required!!!
+    </div> 
   </div>
 
-  <div class="form-group">
-    <label >UserName</label>
-    <input type="text" name="userName" class="form-control" required [(ngModel)]="user.last_name">
+  <div class="form-group"
+    [ngClass]="{
+      'has-danger':lastName.invalid && lastName.touched,
+      'has-success':lastName.valid && lastName.touched
+    }">
+    <label class="form-control-label">UserName</label>
+    <input type="text" name="userName" class="form-control" required [(ngModel)]="user.last_name" #lastName="ngModel"> 
+    <div class="form-control-feedback" *ngIf="lastName.invalid && lastName.touched"> 
+      LastName is required!!!
+    </div> 
   </div>
 
+
   <div class="form-group">
-    <button type="submit" btn btn-primary>Save</button>
+    <button type="submit" btn btn-primary [disabled]="form.invalid">Save</button>
   </div>
 
   {{diagnostic}}

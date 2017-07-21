@@ -7,25 +7,29 @@ import { User } from 'app/shared/models/user';
   styleUrls: ['./user-create.component.css']
 })
 export class UserCreateComponent implements OnInit {
-user:User;
+  user: User;
+  submitted: boolean = false; //check if the form is submitted
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
-    this.user ={
-      id:0,
-      first_name:'',
-      last_name:'',
-      avatar:''
+    this.user = {
+      id: 0,
+      first_name: '',
+      last_name: '',
+      avatar: ''
     };
   }
 
-  get diagnostic(){
+  get diagnostic() {
     return JSON.stringify(this.user);
   }
 
-  procesForm(){
+  processForm(): void {
     console.log(this.user);
+    this.submitted = true;
   }
 
+  //Create User
+  //this.service.createUser(this.user);
 }
