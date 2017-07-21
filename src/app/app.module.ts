@@ -14,6 +14,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import 'hammerjs';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

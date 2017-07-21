@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { UserRoutingModule } from 'app/user/user-routing.module';
 
 import { UserComponent } from 'app/user/user.component';
@@ -8,6 +8,7 @@ import { UserListComponent } from 'app/user/user-list/user-list.component';
 import { UserCreateComponent } from 'app/user/user-create/user-create.component';
 import { UserSingleComponent } from 'app/user/user-single/user-single.component';
 import { UserEditComponent } from 'app/user/user-edit/user-edit.component';
+import { ReactiveComponent } from 'app/reactive/reactive.component';
 
 import { UserService } from 'app/shared/services/user.service';
 
@@ -15,6 +16,7 @@ import { UserService } from 'app/shared/services/user.service';
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     UserRoutingModule,    
   ],
   declarations: [
@@ -22,7 +24,8 @@ import { UserService } from 'app/shared/services/user.service';
     UserListComponent,
     UserCreateComponent,
     UserSingleComponent,
-    UserEditComponent
+    UserEditComponent,
+    ReactiveComponent
   ],
   providers:[
     UserService
